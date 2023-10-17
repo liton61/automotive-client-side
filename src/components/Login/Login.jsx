@@ -6,7 +6,7 @@ const Login = () => {
     return (
         <div>
             <div>
-                <div className="bg-gray-100 flex items-center justify-center py-28">
+                <div className="bg-gray-100 flex items-center justify-center py-20">
                     <div className="bg-white w-96 p-8 rounded-lg shadow-lg">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Login</h2>
                         <form>
