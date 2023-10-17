@@ -77,7 +77,7 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
                     <NavLink
-                        to="/Login"
+                        to="/login"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
                         }
