@@ -1,7 +1,20 @@
-import { NavLink } from "react-router-dom";
-import logo  from '../../assets/logo.png'
+import { Link, NavLink } from "react-router-dom";
+import logo from '../../assets/logo.png'
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import profile from '../../assets/user.png'
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const handleSingOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
     return (
         <div>
             <div className="navbar bg-red-200">
@@ -30,12 +43,12 @@ const Header = () => {
                             </NavLink>
                             </li>
                             <li><NavLink
-                                to="/myCard"
+                                to="/myCart"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
-                                My Card
+                                My Cart
                             </NavLink>
                             </li>
                         </ul>
@@ -65,25 +78,26 @@ const Header = () => {
                         </NavLink>
                         </li>
                         <li className="text-xl font-semibold mx-3"><NavLink
-                            to="/myCard"
+                            to="/myCart"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            My Card
+                            My Cart
                         </NavLink>
                         </li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink
-                        to="/login"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
-                        }
-                    >
-                        <button className="btn btn-neutral text-xl font-semibold">Login</button>
-                    </NavLink>
+                    {
+                        user ?
+                            <div className='flex'>
+                                <img className='w-12 mr-3 rounded-full h-12' src={profile} alt="" />
+                                <Link onClick={handleSingOut} to="/login" className="btn btn-active btn-neutral text-lg">Sign Out</Link>
+                            </div>
+                            :
+                            <Link to="/login" className="btn btn-active btn-neutral text-lg">Login</Link>
+                    }
                 </div>
             </div>
         </div>

@@ -3,9 +3,9 @@ import Root from "../Root/Root";
 import Error from "../Error/Error";
 import Home from "../Home/Home";
 import AddProduct from "../AddProduct/AddProduct";
-import MyCard from "../MyCard/MyCard";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
+import MyCart from "../MyCart/MyCart";
 
 
 const router = createBrowserRouter([
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
                 element: <AddProduct></AddProduct>
             },
             {
-                path: "/myCard",
-                element: <MyCard></MyCard>
+                path: "/myCart",
+                element: <MyCart></MyCart>
             },
             {
                 path: "/login",
