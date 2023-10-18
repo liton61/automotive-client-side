@@ -44,64 +44,71 @@ const AddProduct = () => {
                 <div className="flex w-9/12 mx-auto">
                     <div className="form-control w-full mb-5 mr-3">
                         <label>
-                            <span className="label-text text-lg font-semibold">Car Image</span>
+                            <span className="label-text text-lg font-semibold">Image</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="image" placeholder="Car image" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="image" placeholder="Image" />
                         </label>
                     </div>
                     <div className="form-control w-full mb-5 ml-3">
                         <label>
-                            <span className="label-text text-lg font-semibold">Car Name</span>
+                            <span className="label-text text-lg font-semibold">Model</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="name" placeholder="Car name" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="name" placeholder="Model" />
                         </label>
                     </div>
                 </div>
                 <div className="flex w-9/12 mx-auto">
                     <div className="form-control w-full mb-5 mr-3">
                         <label>
-                            <span className="label-text text-lg font-semibold">Brand Name</span>
+                            <span className="label-text text-lg font-semibold">Brand</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="brand" placeholder="Brand name" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="brand" placeholder="Brand" />
                         </label>
                     </div>
                     <div className="form-control w-full mb-5 ml-3">
                         <label>
-                            <span className="label-text text-lg font-semibold">Car Type</span>
+                            <span className="label-text text-lg font-semibold">Type</span>
                         </label>
-                        <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="type" placeholder="Car type" />
-                        </label>
+                        <select id="type" name="type" className="p-3 w-full focus:outline-none">
+                            <option value="phone">SUV</option>
+                            <option value="computer">Minivan</option>
+                            <option value="headphone">Cabriolet</option>
+                            <option value="headphone">Hatchback</option>
+                            <option value="headphone">Estate car</option>
+                            <option value="headphone">Crossover</option>
+                            <option value="headphone">Sedan</option>
+                            <option value="headphone">Sedan</option>
+                        </select>
                     </div>
                 </div>
                 <div className="flex w-9/12 mx-auto">
                     <div className="form-control w-full mb-5 mr-3">
                         <label>
-                            <span className="label-text text-lg font-semibold">Car Price</span>
+                            <span className="label-text text-lg font-semibold">Price</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="price" placeholder="Car price" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="price" placeholder="Price" />
                         </label>
                     </div>
                     <div className="form-control w-full mb-5 ml-3">
                         <label>
-                            <span className="label-text text-lg font-semibold">Car Rating</span>
+                            <span className="label-text text-lg font-semibold">Rating</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="rating" placeholder="Car rating" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="rating" placeholder="Rating" />
                         </label>
                     </div>
                 </div>
                 <div className="w-9/12 mx-auto">
                     <div className="form-control w-full mb-5 mr-3">
                         <label>
-                            <span className="label-text text-lg font-semibold">Car Description</span>
+                            <span className="label-text text-lg font-semibold">Description</span>
                         </label>
                         <label>
-                            <textarea className="focus:outline-none w-full h-24 p-3" type="text" name="description" placeholder="Car description" />
+                            <textarea className="focus:outline-none w-full h-24 p-3" type="text" name="description" placeholder="Description" />
                         </label>
                     </div>
                 </div>
