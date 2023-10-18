@@ -39,7 +39,7 @@ const Header = () => {
                                     isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
-                                Add Product
+                                Add Car
                             </NavLink>
                             </li>
                             <li><NavLink
@@ -74,7 +74,7 @@ const Header = () => {
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            Add Product
+                            Add Car
                         </NavLink>
                         </li>
                         <li className="text-xl font-semibold mx-3"><NavLink
