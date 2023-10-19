@@ -73,14 +73,13 @@ const AddProduct = () => {
                             <span className="label-text text-lg font-semibold">Type</span>
                         </label>
                         <select id="type" name="type" className="p-3 w-full focus:outline-none">
-                            <option value="phone">SUV</option>
-                            <option value="computer">Minivan</option>
-                            <option value="headphone">Cabriolet</option>
-                            <option value="headphone">Hatchback</option>
-                            <option value="headphone">Estate car</option>
-                            <option value="headphone">Crossover</option>
-                            <option value="headphone">Sedan</option>
-                            <option value="headphone">Sedan</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Minivan">Minivan</option>
+                            <option value="Cabriolet">Cabriolet</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="Estate car">Estate car</option>
+                            <option value="Crossover">Crossover</option>
+                            <option value="Sedan">Sedan</option>
                         </select>
                     </div>
                 </div>

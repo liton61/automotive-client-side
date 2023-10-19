@@ -10,7 +10,9 @@ import './BrandCollection.css';
 const BrandCollection = () => {
     return (
         <div>
-            <h1 className='text-center text-4xl font-bold my-12'>Brand Collection</h1>
+            <div>
+                <h1 className="text-center text-4xl font-bold mt-10 mb-3">Our Brand Collection</h1><hr className="w-1/2 mx-auto border-b-2 border-gray-500 mb-10" />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <div className="card">
                     <div className="image">
@@ -67,7 +69,7 @@ const BrandCollection = () => {
                         <img src={brand8} alt="Brand 6" />
                     </div>
                     <div className="overlay">
-                        <Link to="/tesla">
+                        <Link to="/toyota">
                             <button className="btn text-black font-semibold">TOYOTA</button>
                         </Link>
                     </div>

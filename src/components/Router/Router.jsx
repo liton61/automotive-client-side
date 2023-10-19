@@ -54,23 +54,28 @@ const router = createBrowserRouter([
             },
             {
                 path: "/honda",
-                element: <Honda></Honda>
+                element: <Honda></Honda>,
+                loader: () => fetch('http://localhost:5000/cars')
             },
             {
                 path: "/toyota",
-                element: <Toyota></Toyota>
+                element: <Toyota></Toyota>,
+                loader: () => fetch('http://localhost:5000/cars')
             },
             {
                 path: "/tesla",
-                element: <Tesla></Tesla>
+                element: <Tesla></Tesla>,
+                loader: () => fetch('http://localhost:5000/cars')
             },
             {
                 path: "/mercedes",
-                element: <Mercedes></Mercedes>
+                element: <Mercedes></Mercedes>,
+                loader: () => fetch('http://localhost:5000/cars')
             },
             {
                 path: "/ford",
-                element: <Ford></Ford>
+                element: <Ford></Ford>,
+                loader: () => fetch('http://localhost:5000/cars')
             },
         ],
     },

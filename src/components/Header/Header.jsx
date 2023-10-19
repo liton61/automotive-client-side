@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import profile from '../../assets/user.png'
+// import profile from '../../assets/user.png'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -92,7 +92,8 @@ const Header = () => {
                     {
                         user ?
                             <div className='flex'>
-                                <img className='w-12 mr-3 rounded-full h-12' src={profile} alt="" />
+                                <img className='w-12 mr-3 rounded-full h-12' src={user?.photoURL} alt="" />
+                                <h2 className="flex items-center text-base font-bold mr-5">{user?.displayName}</h2>
                                 <Link onClick={handleSingOut} to="/login" className="btn btn-active btn-neutral text-lg">Sign Out</Link>
                             </div>
                             :
