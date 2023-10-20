@@ -8,6 +8,7 @@ import Register from "../Register/Register";
 import MyCart from "../MyCart/MyCart";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import GetCar from "../GetCar/GetCar";
+import Brand from "../Brand/Brand";
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/cars')
+                // loader: () => fetch('http://localhost:5000/cars')
+                loader: () => fetch('/brand.json')
             },
             {
                 path: "/addProduct",
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
                 path: "/getCar",
                 element: <GetCar></GetCar>
             },
+            {
+                path: "/brands/:id",
+                element: <Brand></Brand>,
+            }
         ],
     },
 ]);

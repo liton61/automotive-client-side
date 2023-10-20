@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Alex Leeman",
+        "designation": "Director",
+        "img": "https://i.postimg.cc/vBrFGS6j/01.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Nick Della",
+        "designation": "Co-Founder",
+        "img": "https://i.postimg.cc/hvKFvbLG/03.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Diago Johnson",
+        "designation": "Sales Manager",
+        "img": "https://i.postimg.cc/nV1b5gx9/02.jpg"
+    },
+    {
+        "id": 4,
+        "name": "William Henry",
+        "designation": "Marketing",
+        "img": "https://i.postimg.cc/NFD3H9Dk/04.jpg"
+    }
+]
