@@ -42,6 +42,15 @@ const Header = () => {
                                 Add Car
                             </NavLink>
                             </li>
+                            <li className="text-xl font-semibold mx-3"><NavLink
+                                to="/updateProduct"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "active" : ""
+                                }
+                            >
+                                Update Car
+                            </NavLink>
+                            </li>
                             <li><NavLink
                                 to="/myCart"
                                 className={({ isActive, isPending }) =>
@@ -75,6 +84,15 @@ const Header = () => {
                             }
                         >
                             Add Car
+                        </NavLink>
+                        </li>
+                        <li className="text-xl font-semibold mx-3"><NavLink
+                            to="/updateProduct"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Update Car
                         </NavLink>
                         </li>
                         <li className="text-xl font-semibold mx-3"><NavLink

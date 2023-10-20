@@ -1,8 +1,7 @@
-import Swal from "sweetalert2";
 
 
-const AddProduct = () => {
-    const handleAddCar = e => {
+const UpdateProduct = () => {
+    const handleUpdateCar = e => {
         e.preventDefault();
         const form = e.target;
         const image = form.image.value;
@@ -15,32 +14,11 @@ const AddProduct = () => {
 
         const carInfo = { image, model, brand, type, price, rating, description };
         console.log(carInfo);
-
-        // post method
-
-        fetch('http://localhost:5000/cars', {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(carInfo),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.insertedId)
-                    Swal.fire({
-                        position: 'center',
-                        icon: 'success',
-                        title: 'Car successfully added  !',
-                        showConfirmButton: false,
-                        timer: 2000
-                    })
-            });
     }
     return (
         <div className="bg-slate-100 pb-24">
-            <h1 className="text-center text-2xl font-bold py-5">Add Car</h1>
-            <form onSubmit={handleAddCar}>
+            <h1 className="text-center text-2xl font-bold py-5">Update Car</h1>
+            <form onSubmit={handleUpdateCar}>
                 <div className="flex w-9/12 mx-auto">
                     <div className="form-control w-full mb-5 mr-3">
                         <label>
@@ -124,4 +102,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default UpdateProduct;
