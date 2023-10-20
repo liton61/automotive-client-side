@@ -1,15 +1,13 @@
 // import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 // import GetCar from "../GetCar/GetCar";
-import BrandCollection from "../BrandCollection/BrandCollection";
 
 
 const Home = () => {
-    // const loadCar = useLoaderData();
     return (
         <div>
             <Banner></Banner>
-            <BrandCollection></BrandCollection>
+            {/* <BrandCollection></BrandCollection> */}
             {/* <h1 className="text-center text-4xl font-bold my-12">Our Car Collections</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 mx-6">
                 {

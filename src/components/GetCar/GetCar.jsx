@@ -12,7 +12,7 @@ const GetCar = () => {
 export default GetCar;
 
 // const GetCar = ({ car }) => {
-//     const { image, name, brand, type, price, rating, description } = car;
+//     const { image, model, brand, type, price, rating, description } = car;
 //     return (
 //         <div>
 //             <div className="card bg-base-100 shadow-xl">

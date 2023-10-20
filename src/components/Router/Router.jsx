@@ -8,12 +8,6 @@ import Register from "../Register/Register";
 import MyCart from "../MyCart/MyCart";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import GetCar from "../GetCar/GetCar";
-import Bmw from "../Bmw/Bmw";
-import Honda from "../Honda/Honda";
-import Toyota from "../Toyota/Toyota";
-import Tesla from "../Tesla/Tesla";
-import Mercedes from "../Mercedes/Mercedes";
-import Ford from "../Ford/Ford";
 
 
 const router = createBrowserRouter([
@@ -46,36 +40,6 @@ const router = createBrowserRouter([
             {
                 path: "/getCar",
                 element: <GetCar></GetCar>
-            },
-            {
-                path: "/bmw",
-                element: <Bmw></Bmw>,
-                loader: () => fetch('http://localhost:5000/cars')
-            },
-            {
-                path: "/honda",
-                element: <Honda></Honda>,
-                loader: () => fetch('http://localhost:5000/cars')
-            },
-            {
-                path: "/toyota",
-                element: <Toyota></Toyota>,
-                loader: () => fetch('http://localhost:5000/cars')
-            },
-            {
-                path: "/tesla",
-                element: <Tesla></Tesla>,
-                loader: () => fetch('http://localhost:5000/cars')
-            },
-            {
-                path: "/mercedes",
-                element: <Mercedes></Mercedes>,
-                loader: () => fetch('http://localhost:5000/cars')
-            },
-            {
-                path: "/ford",
-                element: <Ford></Ford>,
-                loader: () => fetch('http://localhost:5000/cars')
             },
         ],
     },

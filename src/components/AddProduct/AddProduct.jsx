@@ -6,14 +6,14 @@ const AddProduct = () => {
         e.preventDefault();
         const form = e.target;
         const image = form.image.value;
-        const name = form.name.value;
+        const model = form.model.value;
         const brand = form.brand.value;
         const type = form.type.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const description = form.description.value;
 
-        const carInfo = { image, name, brand, type, price, rating, description };
+        const carInfo = { image, model, brand, type, price, rating, description };
         console.log(carInfo);
 
         // post method
@@ -55,7 +55,7 @@ const AddProduct = () => {
                             <span className="label-text text-lg font-semibold">Model</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="name" placeholder="Model" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="model" placeholder="Model" />
                         </label>
                     </div>
                 </div>
@@ -64,9 +64,14 @@ const AddProduct = () => {
                         <label>
                             <span className="label-text text-lg font-semibold">Brand</span>
                         </label>
-                        <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="brand" placeholder="Brand" />
-                        </label>
+                        <select id="type" name="model" className="p-3 w-full focus:outline-none">
+                            <option value="BMW">BMW</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Tesla">Tesla</option>
+                            <option value="Toyota">Toyota</option>
+                        </select>
                     </div>
                     <div className="form-control w-full mb-5 ml-3">
                         <label>
