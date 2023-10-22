@@ -1,6 +1,11 @@
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const UpdateProduct = () => {
+    const car = useLoaderData();
+    const { _id, image, model, brand, type, price, rating, description } = car;
+
     const handleUpdateCar = e => {
         e.preventDefault();
         const form = e.target;
@@ -12,8 +17,28 @@ const UpdateProduct = () => {
         const rating = form.rating.value;
         const description = form.description.value;
 
-        const carInfo = { image, model, brand, type, price, rating, description };
-        console.log(carInfo);
+        const updateCar = { image, model, brand, type, price, rating, description };
+        console.log(updateCar);
+
+        // post method
+        fetch(`http://localhost:5000/cars/${_id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(updateCar),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.modifiedCount > 0)
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Car successfully updated !',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+            });
     }
     return (
         <div className="bg-slate-100 pb-24">
@@ -25,7 +50,7 @@ const UpdateProduct = () => {
                             <span className="label-text text-lg font-semibold">Image</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="image" placeholder="Image" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="image" defaultValue={image} placeholder="Image" />
                         </label>
                     </div>
                     <div className="form-control w-full mb-5 ml-3">
@@ -33,7 +58,7 @@ const UpdateProduct = () => {
                             <span className="label-text text-lg font-semibold">Model</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="model" placeholder="Model" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="model" defaultValue={model} placeholder="Model" />
                         </label>
                     </div>
                 </div>
@@ -42,7 +67,7 @@ const UpdateProduct = () => {
                         <label>
                             <span className="label-text text-lg font-semibold">Brand</span>
                         </label>
-                        <select id="type" name="model" className="p-3 w-full focus:outline-none">
+                        <select id="type" name="brand" defaultValue={brand} className="p-3 w-full focus:outline-none">
                             <option value="BMW">BMW</option>
                             <option value="Ford">Ford</option>
                             <option value="Honda">Honda</option>
@@ -55,7 +80,7 @@ const UpdateProduct = () => {
                         <label>
                             <span className="label-text text-lg font-semibold">Type</span>
                         </label>
-                        <select id="type" name="type" className="p-3 w-full focus:outline-none">
+                        <select id="type" name="type" defaultValue={type} className="p-3 w-full focus:outline-none">
                             <option value="SUV">SUV</option>
                             <option value="Minivan">Minivan</option>
                             <option value="Cabriolet">Cabriolet</option>
@@ -72,7 +97,7 @@ const UpdateProduct = () => {
                             <span className="label-text text-lg font-semibold">Price</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="price" placeholder="Price" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="price" defaultValue={price} placeholder="Price" />
                         </label>
                     </div>
                     <div className="form-control w-full mb-5 ml-3">
@@ -80,7 +105,7 @@ const UpdateProduct = () => {
                             <span className="label-text text-lg font-semibold">Rating</span>
                         </label>
                         <label>
-                            <input className="focus:outline-none w-full p-3" type="text" name="rating" placeholder="Rating" />
+                            <input className="focus:outline-none w-full p-3" type="text" name="rating" defaultValue={rating} placeholder="Rating" />
                         </label>
                     </div>
                 </div>
@@ -90,7 +115,7 @@ const UpdateProduct = () => {
                             <span className="label-text text-lg font-semibold">Description</span>
                         </label>
                         <label>
-                            <textarea className="focus:outline-none w-full h-24 p-3" type="text" name="description" placeholder="Description" />
+                            <textarea className="focus:outline-none w-full h-24 p-3" type="text" name="description" defaultValue={description} placeholder="Description" />
                         </label>
                     </div>
                 </div>

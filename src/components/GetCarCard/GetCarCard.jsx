@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 const GetCarCard = ({ car }) => {
-    const { _id,image, model, brand, type, price, rating, description } = car;
+    const { _id, image, model, brand, type, price, rating, description } = car;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl mx-auto mb-10">
@@ -18,12 +18,12 @@ const GetCarCard = ({ car }) => {
                     <h2>Model : {model}</h2>
                     <h2>Price : {price}</h2>
                     <div className="card-actions justify-end">
-                       <Link to={`/details/${_id}`}>
-                       <button className="btn btn-neutral">Details</button>
-                       </Link>
-                       <Link to="/updateProduct">
-                       <button className="btn btn-neutral">Update</button>
-                       </Link>
+                        <Link to={`/details/${_id}`}>
+                            <button className="btn btn-neutral">Details</button>
+                        </Link>
+                        <Link to={`updateProduct/${_id}`}>
+                            <button className="btn btn-neutral">Update</button>
+                        </Link>
                     </div>
                 </div>
             </div>

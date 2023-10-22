@@ -17,7 +17,6 @@ const AddProduct = () => {
         console.log(carInfo);
 
         // post method
-
         fetch('http://localhost:5000/cars', {
             method: "POST",
             headers: {
@@ -31,7 +30,7 @@ const AddProduct = () => {
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
-                        title: 'Car successfully added  !',
+                        title: 'Car successfully added !',
                         showConfirmButton: false,
                         timer: 2000
                     })
