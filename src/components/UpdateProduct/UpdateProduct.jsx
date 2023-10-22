@@ -120,7 +120,7 @@ const UpdateProduct = () => {
                     </div>
                 </div>
                 <div className="w-9/12 mx-auto">
-                    <input className="btn btn-neutral w-full mt-5" type="submit" value="Add Car" />
+                    <input className="btn btn-neutral w-full mt-5" type="submit" value="Update Car" />
                 </div>
             </form>
         </div>

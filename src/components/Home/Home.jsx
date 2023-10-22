@@ -1,5 +1,5 @@
 import Banner from "../Banner/Banner";
-import GetCar from "../GetCard/GetCar";
+import GetCar from "../GetCar/GetCar";
 import Package from "../Package/Package";
 import Team from "../Team/Team";
 

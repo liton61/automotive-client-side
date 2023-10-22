@@ -6,7 +6,7 @@ const Package = () => {
             <h1 className="text-center text-4xl font-bold mt-16 mb-2">Our Offered Package</h1>
             <hr className="w-1/2 border-t-4 border-red-300 mb-10 mx-auto"></hr>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 mb-10">
-                <div className="p-6 w-96 mx-auto bg-red-200 rounded-lg shadow-md mb-5">
+                <div className="p-6 w-96 mx-auto bg-red-200 rounded-lg shadow-md mb-5 md:w-80 lg:w-96">
                     <h2 className="text-2xl font-semibold text-gray-800">Basic Plan</h2>
                     <p className="mt-4 text-gray-600">An affordable option for your car needs.</p>
                     <div className="mt-4 flex items-center">
@@ -32,7 +32,7 @@ const Package = () => {
                     </div>
                 </div>
 
-                <div className="p-6 w-96 mx-auto bg-red-200 rounded-lg shadow-md mb-5">
+                <div className="p-6 w-96 mx-auto bg-red-200 rounded-lg shadow-md mb-5 md:w-80 lg:w-96">
                     <h2 className="text-2xl font-semibold text-gray-800">Pro Plan</h2>
                     <p className="mt-4 text-gray-600">A balanced plan with additional benefits.</p>
                     <div className="mt-4 flex items-center">
@@ -58,7 +58,7 @@ const Package = () => {
                     </div>
                 </div>
 
-                <div className="p-6 w-96 mx-auto bg-red-200 rounded-lg shadow-md mb-5">
+                <div className="p-6 w-96 mx-auto bg-red-200 rounded-lg shadow-md mb-5 md:w-80 lg:w-96">
                     <h2 className="text-2xl font-semibold text-gray-800">Premium Plan</h2>
                     <p className="mt-4 text-gray-600">Our top-tier plan with exclusive benefits.</p>
                     <div className="mt-4 flex items-center">

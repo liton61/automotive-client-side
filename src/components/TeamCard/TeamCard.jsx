@@ -6,7 +6,7 @@ const TeamCard = ({ team }) => {
     const { id, name, designation, img } = team;
     return (
         <div>
-            <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-full h-96 rounded-xl bg-clip-border mb-5">
+            <div className="relative flex flex-col text-gray-700 bg-white shadow-md h-96 rounded-xl bg-clip-border mb-5 md:w-80 lg:w-72 mx-auto">
                 <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
                     <img className="h-56 w-full" src={img} alt="profile-picture" />
                 </div>

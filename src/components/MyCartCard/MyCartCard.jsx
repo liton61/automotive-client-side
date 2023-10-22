@@ -1,10 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-
 import { Link } from "react-router-dom";
 
 
-const GetCarCard = ({ car }) => {
+const MyCartCard = ({ car }) => {
     const { _id, image, model, brand, type, price, rating, description } = car;
     return (
         <div>
@@ -18,11 +17,8 @@ const GetCarCard = ({ car }) => {
                     <h2>Model : {model}</h2>
                     <h2>Price : {price}</h2>
                     <div className="card-actions justify-end">
-                        <Link to={`/details/${_id}`}>
-                            <button className="btn btn-neutral">Details</button>
-                        </Link>
-                        <Link to={`updateProduct/${_id}`}>
-                            <button className="btn btn-neutral">Update</button>
+                        <Link to={`/myCart/${_id}`}>
+                            <button className="btn btn-neutral">Delete</button>
                         </Link>
                     </div>
                 </div>
@@ -31,4 +27,4 @@ const GetCarCard = ({ car }) => {
     );
 };
 
-export default GetCarCard;
+export default MyCartCard;

@@ -42,15 +42,6 @@ const Header = () => {
                                 Add Car
                             </NavLink>
                             </li>
-                            <li className="text-xl font-semibold mx-3"><NavLink
-                                to="/updateProduct"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "active" : ""
-                                }
-                            >
-                                Update Car
-                            </NavLink>
-                            </li>
                             <li><NavLink
                                 to="/myCart"
                                 className={({ isActive, isPending }) =>
@@ -87,15 +78,6 @@ const Header = () => {
                         </NavLink>
                         </li>
                         <li className="text-xl font-semibold mx-3"><NavLink
-                            to="/updateProduct"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
-                        >
-                            Update Car
-                        </NavLink>
-                        </li>
-                        <li className="text-xl font-semibold mx-3"><NavLink
                             to="/myCart"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
@@ -110,12 +92,12 @@ const Header = () => {
                     {
                         user ?
                             <div className='flex'>
-                                <img className='w-12 mr-3 rounded-full h-12' src={user?.photoURL} alt="" />
-                                <h2 className="flex items-center text-base font-bold mr-5">{user?.displayName}</h2>
-                                <Link onClick={handleSingOut} to="/login" className="btn btn-active btn-neutral text-lg">Sign Out</Link>
+                                <img className='w-12 mr-2 rounded-full h-12' src={user?.photoURL} alt="" />
+                                <h2 className="flex items-center text-sm font-medium mr-2">{user?.displayName}</h2>
+                                <Link onClick={handleSingOut} to="/login" className="btn btn-active btn-neutral text-sm">Sign Out</Link>
                             </div>
                             :
-                            <Link to="/login" className="btn btn-active btn-neutral text-lg">Login</Link>
+                            <Link to="/login" className="btn btn-active btn-neutral text-sm">Login</Link>
                     }
                 </div>
             </div>

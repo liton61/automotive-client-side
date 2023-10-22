@@ -8,7 +8,7 @@ import Register from "../Register/Register";
 import MyCart from "../MyCart/MyCart";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import UpdateProduct from "../UpdateProduct/UpdateProduct";
-import GetCar from "../GetCard/GetCar";
+import GetCar from "../GetCar/GetCar";
 import GetCarCard from "../GetCarCard/GetCarCard";
 import Details from "../Details/Details";
 
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/cars/${params.id}`)
             },
             {
                 path: "/getCar",
