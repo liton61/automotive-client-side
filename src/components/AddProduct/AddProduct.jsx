@@ -64,7 +64,7 @@ const AddProduct = () => {
                         <label>
                             <span className="label-text text-lg font-semibold">Brand</span>
                         </label>
-                        <select id="type" name="model" className="p-3 w-full focus:outline-none">
+                        <select id="type" name="brand" className="p-3 w-full focus:outline-none">
                             <option value="BMW">BMW</option>
                             <option value="Ford">Ford</option>
                             <option value="Honda">Honda</option>

@@ -7,9 +7,10 @@ import Login from "../Login/Login";
 import Register from "../Register/Register";
 import MyCart from "../MyCart/MyCart";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import GetCar from "../GetCar/GetCar";
-import Brand from "../Brand/Brand";
 import UpdateProduct from "../UpdateProduct/UpdateProduct";
+import GetCar from "../GetCard/GetCar";
+import GetCarCard from "../GetCarCard/GetCarCard";
+import Details from "../Details/Details";
 
 
 const router = createBrowserRouter([
@@ -21,8 +22,6 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                // loader: () => fetch('http://localhost:5000/cars')
-                loader: () => fetch('/brand.json')
             },
             {
                 path: "/addProduct",
@@ -41,16 +40,21 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: "/getCar",
-                element: <GetCar></GetCar>
-            },
-            {
-                path: "/brands/:id",
-                element: <Brand></Brand>,
-            },
-            {
                 path: "/updateProduct",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>
+            },
+            {
+                path: "/getCar",
+                element: <GetCar></GetCar>,
+            },
+            {
+                path: "/getCarCard",
+                element: <GetCarCard></GetCarCard>
+            },
+            {
+                path: "/details/:_id",
+                element: <Details></Details>,
+                loader: () => fetch('http://localhost:5000/cars')
             }
         ],
     },
