@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 /* eslint-disable react/prop-types */
 const DetailsCard = ({ details }) => {
     const { _id, image, model, brand, type, price, rating, description } = details || {};
+    const detail = { image, model, brand, type, price, rating, description };
     const handleAddToCart = () => {
 
         // post method
@@ -13,7 +14,7 @@ const DetailsCard = ({ details }) => {
             headers: {
                 "content-type": "application/json",
             },
-            body: JSON.stringify(details),
+            body: JSON.stringify(detail),
         })
             .then((res) => res.json())
             .then((data) => {
@@ -21,7 +22,7 @@ const DetailsCard = ({ details }) => {
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
-                        title: 'Car successfully added  !',
+                        title: 'Car successfully added !',
                         showConfirmButton: false,
                         timer: 2000
                     })

@@ -4,6 +4,7 @@ import MyCartCard from "../MyCartCard/MyCartCard";
 
 const MyCart = () => {
     const [cars, setCars] = useState([]);
+    // const [singleCar,setSingleCar] = useState();
     useEffect(() => {
         fetch('http://localhost:5000/cart')
             .then(res => res.json())
@@ -15,7 +16,9 @@ const MyCart = () => {
             <hr className="w-1/4 border-t-4 border-red-300 mb-10 mx-auto"></hr>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
-                    cars.map(car => <MyCartCard key={car.id} car={car}></MyCartCard>)
+                    cars.map(car => <MyCartCard key={car._id} car={car}
+                        cars={cars}
+                        setCars={setCars}></MyCartCard>)
                 }
             </div>
         </div>
