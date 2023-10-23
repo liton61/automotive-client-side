@@ -30,12 +30,12 @@ const DetailsCard = ({ details }) => {
     }
     return (
         <div>
-            <div className="card w-1/2 mx-auto bg-base-100 shadow-xl mb-10">
+            <div className="card w-full mx-auto bg-base-100 shadow-xl mb-10 md:w-3/4 lg:w-1/2 ">
                 <figure><img className="h-[70vh] w-full" src={image} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Brand : {brand}</h2>
-                    <h2>Model : {model}</h2>
-                    <h2>Price : {price}</h2>
+                    <h2 className="text-sm font-medium">Model : {model}</h2>
+                    <h2 className="text-sm font-medium">Price : {price}</h2>
                     <div className="card-actions justify-end">
                         <button onClick={handleAddToCart} className="btn btn-neutral w-full">Add To Cart</button>
                     </div>

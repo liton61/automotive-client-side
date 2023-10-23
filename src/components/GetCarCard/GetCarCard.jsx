@@ -15,8 +15,9 @@ const GetCarCard = ({ car }) => {
                         Brand : {brand}
                         <div className="badge badge-warning text-white">{rating}</div>
                     </h2>
-                    <h2>Model : {model}</h2>
-                    <h2>Price : {price}</h2>
+                    <h2 className="text-sm font-medium">Model : {model}</h2>
+                    <h2 className="text-sm font-medium">Type : {type}</h2>
+                    <h2 className="text-sm font-medium">Price : {price}</h2>
                     <div className="card-actions justify-end">
                         <Link to={`/details/${_id}`}>
                             <button className="btn btn-neutral">Details</button>

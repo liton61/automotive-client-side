@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-// import profile from '../../assets/user.png'
+import Theme from "../Theme/Theme";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -51,6 +51,9 @@ const Header = () => {
                                 My Cart
                             </NavLink>
                             </li>
+                            <div className="bg-white rounded-full w-7 ml-5 my-3">
+                                <Theme></Theme>
+                            </div>
                         </ul>
                     </div>
                     <div>
@@ -86,6 +89,9 @@ const Header = () => {
                             My Cart
                         </NavLink>
                         </li>
+                        <div className="bg-white rounded-full">
+                            <Theme></Theme>
+                        </div>
                     </ul>
                 </div>
                 <div className="navbar-end">
