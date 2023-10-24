@@ -1,15 +1,15 @@
-- .We have used react router 
-- .We have used firebase for authentication 
-- .It's a single page application 
-- .We have created dynamic routes 
-- .We have created private routes 
-- .We have implemented register and login system 
-- .We have implemented validation for users 
-- .We have implemented google login system
-- .We have used database (mongodb) to store data.
-- .We can get data from database
-- .We have implemented delete method
-- .We have implemented update method
+- We have used react router 
+- We have used firebase for authentication 
+- It's a single page application 
+- We have created dynamic routes 
+- We have created private routes 
+- We have implemented register and login system 
+- We have implemented validation for users 
+- We have implemented google login system
+- We have used database (mongodb) to store data.
+- We can get data from database
+- We have implemented delete method
+- We have implemented update method
 
 
 
