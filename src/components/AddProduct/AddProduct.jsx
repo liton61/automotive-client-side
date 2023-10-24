@@ -28,7 +28,7 @@ const AddProduct = () => {
             .then((data) => {
                 if (data.insertedId)
                     Swal.fire({
-                        position: 'center',
+                        position: 'top',
                         icon: 'success',
                         title: 'Car successfully added !',
                         showConfirmButton: false,
@@ -63,7 +63,7 @@ const AddProduct = () => {
                         <label>
                             <span className="label-text text-lg font-semibold dark:text-white">Brand</span>
                         </label>
-                        <select id="type" name="brand" className="p-3 w-full focus:outline-none">
+                        <select id="brand" name="brand" className="p-3 w-full focus:outline-none">
                             <option value="BMW">BMW</option>
                             <option value="Ford">Ford</option>
                             <option value="Honda">Honda</option>
@@ -78,7 +78,7 @@ const AddProduct = () => {
                         </label>
                         <select id="type" name="type" className="p-3 w-full focus:outline-none">
                             <option value="SUV">SUV</option>
-                            <option value="Minivan">Minivan</option>
+                            <option value="CR-V">CR-V</option>
                             <option value="Cabriolet">Cabriolet</option>
                             <option value="Hatchback">Hatchback</option>
                             <option value="Estate car">Estate car</option>

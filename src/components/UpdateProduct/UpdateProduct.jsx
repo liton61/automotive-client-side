@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 const UpdateProduct = () => {
     const car = useLoaderData();
     const { _id, image, model, brand, type, price, rating, description } = car;
+    console.log(type);
 
     const handleUpdateCar = e => {
         e.preventDefault();
@@ -32,7 +33,7 @@ const UpdateProduct = () => {
             .then((data) => {
                 if (data.modifiedCount > 0)
                     Swal.fire({
-                        position: 'center',
+                        position: 'top',
                         icon: 'success',
                         title: 'Car successfully updated !',
                         showConfirmButton: false,
@@ -67,7 +68,7 @@ const UpdateProduct = () => {
                         <label>
                             <span className="label-text text-lg font-semibold">Brand</span>
                         </label>
-                        <select id="type" name="brand" defaultValue={brand} className="p-3 w-full focus:outline-none">
+                        <select id="brand" name="brand" defaultValue={brand} className="p-3 w-full focus:outline-none">
                             <option value="BMW">BMW</option>
                             <option value="Ford">Ford</option>
                             <option value="Honda">Honda</option>

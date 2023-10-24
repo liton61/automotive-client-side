@@ -22,7 +22,7 @@ const GetCarCard = ({ car }) => {
                         <Link to={`/details/${_id}`}>
                             <button className="btn btn-neutral">Details</button>
                         </Link>
-                        <Link to={`updateProduct/${_id}`}>
+                        <Link to={`/updateProduct/${_id}`}>
                             <button className="btn btn-neutral">Update</button>
                         </Link>
                     </div>

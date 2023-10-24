@@ -15,7 +15,7 @@ const Details = () => {
         <div>
             <h1 className="text-center text-4xl font-bold mt-16 mb-2 dark:text-white">Car Details</h1>
             <hr className="w-1/5 border-t-4 border-red-300 mb-10 mx-auto"></hr>
-            <div className="mx-5">
+            <div className="mx-auto lg:w-3/4">
                 <DetailsCard details={details}></DetailsCard>
             </div>
         </div>

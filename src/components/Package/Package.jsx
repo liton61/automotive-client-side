@@ -1,6 +1,16 @@
+import Swal from "sweetalert2";
 
 
 const Package = () => {
+    const handleApply = () => {
+        Swal.fire({
+            position: 'top',
+            icon: 'success',
+            title: 'Your you have successfully applied',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    }
     return (
         <div>
             <h1 className="text-center text-4xl font-bold mt-16 mb-2 dark:text-white">Our Offered Package</h1>
@@ -28,7 +38,7 @@ const Package = () => {
                         </li>
                     </ul>
                     <div className="mt-6">
-                        <button className="btn btn-neutral w-full">Apply Now</button>
+                        <button onClick={handleApply} className="btn btn-neutral w-full">Apply Now</button>
                     </div>
                 </div>
 
@@ -54,7 +64,7 @@ const Package = () => {
                         </li>
                     </ul>
                     <div className="mt-6">
-                        <button className="btn btn-neutral w-full">Apply Now</button>
+                        <button onClick={handleApply} className="btn btn-neutral w-full">Apply Now</button>
                     </div>
                 </div>
 
@@ -80,7 +90,7 @@ const Package = () => {
                         </li>
                     </ul>
                     <div className="mt-6">
-                        <button className="btn btn-neutral w-full">Apply Now</button>
+                        <button onClick={handleApply} className="btn btn-neutral w-full">Apply Now</button>
                     </div>
                 </div>
 

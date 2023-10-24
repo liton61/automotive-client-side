@@ -20,7 +20,7 @@ const DetailsCard = ({ details }) => {
             .then((data) => {
                 if (data.insertedId)
                     Swal.fire({
-                        position: 'center',
+                        position: 'top',
                         icon: 'success',
                         title: 'Car successfully added !',
                         showConfirmButton: false,
@@ -36,6 +36,8 @@ const DetailsCard = ({ details }) => {
                     <h2 className="card-title">Brand : {brand}</h2>
                     <h2 className="text-sm font-medium">Model : {model}</h2>
                     <h2 className="text-sm font-medium">Price : {price}</h2>
+                    <h2 className="text-sm font-normal">Enjoy a 12% discount today and save on your purchase.
+                        Get 12% off now and make your purchase more affordable.</h2>
                     <div className="card-actions justify-end">
                         <button onClick={handleAddToCart} className="btn btn-neutral w-full">Add To Cart</button>
                     </div>
