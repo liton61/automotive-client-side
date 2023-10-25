@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/brand')
+                loader: () => fetch('https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/brand')
             },
             {
                 path: "/addProduct",
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/cars/${params.id}`)
+                loader: ({ params }) => fetch(`https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/cars/${params.id}`)
             },
             {
                 path: "/getCar",
@@ -61,12 +61,12 @@ const router = createBrowserRouter([
             {
                 path: "/details/:_id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/cars')
+                loader: () => fetch('https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/cars')
             },
             {
                 path: "/car/:name",
                 element: <Car></Car>,
-                loader: ({ params }) => fetch(`http://localhost:5000/allCars/${params.name}`)
+                loader: ({ params }) => fetch(`https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/allCars/${params.name}`)
             }
         ],
     },

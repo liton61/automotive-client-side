@@ -17,7 +17,7 @@ const AddProduct = () => {
         console.log(carInfo);
 
         // post method
-        fetch('http://localhost:5000/cars', {
+        fetch('https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/cars', {
             method: "POST",
             headers: {
                 "content-type": "application/json",

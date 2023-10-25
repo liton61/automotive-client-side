@@ -5,7 +5,7 @@ import MyCartCard from "../MyCartCard/MyCartCard";
 const MyCart = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/cart')
+        fetch('https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/cart')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])

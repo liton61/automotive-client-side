@@ -6,7 +6,7 @@ import Slider from "../Slider/Slider";
 const GetCar = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/cars')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])

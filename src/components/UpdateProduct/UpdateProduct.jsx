@@ -22,7 +22,7 @@ const UpdateProduct = () => {
         console.log(updateCar);
 
         // post method
-        fetch(`http://localhost:5000/cars/${_id}`, {
+        fetch(`https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/cars/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

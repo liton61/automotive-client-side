@@ -9,7 +9,7 @@ const DetailsCard = ({ details }) => {
     const handleAddToCart = () => {
 
         // post method
-        fetch('http://localhost:5000/cart', {
+        fetch('https://automotive-server-side-aap2cdtbc-liton-mias-projects.vercel.app/cart', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
