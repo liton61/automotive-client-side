@@ -1,6 +1,7 @@
 # Automotive Zone
 - Live link :  https://automotive-zone.web.app
 
+- It's a online car selling web application
 - We have used react router 
 - We have used firebase for authentication 
 - It's a single page application 
